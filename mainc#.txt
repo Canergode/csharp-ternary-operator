@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TernaryOperator 
+{
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            InlineIf();
+            Console.ReadLine();
+        }
+
+        private static void InlineIf()
+        {
+            // Simple temporary:check if 9 is divisible by 3 
+            int number = 9;
+            bool isDivisibleBy3 = number % 3 == 0 ? true : false;
+
+            // Chained ternary:get city plate code 
+            string userCity = Console.ReadLine();
+            string plateCode = userCity == "Istanbul" ? "34" : userCity == "istanbul" ? "34" : "0";
+
+            Console.WriteLine(plateCode);
+        }
+    }
+
+}
